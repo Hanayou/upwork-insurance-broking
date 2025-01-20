@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-200">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Insurance Broking Screen - Upwork - Samuel Short</title>
+  </head>
+  <body class="grid place-items-center lg:p-[5dvh]">
+    <div
+      id="app"
+      class="w-full lg:h-[90dvh] bg-white rounded-xl overflow-y-auto"
+    >
+      <!-- TITLE BAR -->
+      <div
+        class="w-full flex items-center justify-between px-4 bg-slate-800 lg:rounded-t-xl"
+      >
+        <div class="flex items-center space-x-2">
+          <img src="/vite.svg" alt="Vite Logo" class="size-6 hidden sm:block" />
+          <h1
+            class="text-base lg:text-xl text-white whitespace-nowrap overflow-ellipsis font-semibold"
+          >
+            ENBC ACCOUNTS TEST - Policy Transaction
+          </h1>
+        </div>
+        <div class="dropdown dropdown-bottom dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost text-white m-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+            <span class="hidden sm:block">Jonathan Bullen</span>
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content border border-slate-800 menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow space-y-2"
+          >
+            <p class="font-bold">
+              Jonathan Bullen
+              <br />
+              <span class="italic text-xs opacity-75 font-normal"
+                >Session 1</span
+              >
+            </p>
+            <p class="text-error font-bold">ACCT. PER.: 01/FY2024</p>
+            <button class="btn btn-outline btn-xs">Start New Session</button>
+            <button class="btn btn-error btn-xs text-white">Logout</button>
+          </ul>
+        </div>
+      </div>
+      <!-- NAVIGATION -->
+      <nav>
+        <div
+          role="tablist"
+          class="tabs tabs-bordered w-fit whitespace-nowrap p-4 mx-auto lg:mx-0"
+        >
+          <a role="tab" class="tab">Home</a>
+          <a role="tab" class="tab tab-active">Clients</a>
+          <a role="tab" class="tab">Policies</a>
+          <a role="tab" class="tab">etc...</a>
+        </div>
+      </nav>
+      <!-- MAIN CONTENT -->
+      <div class="grid grid-cols-1 lg:grid-cols-[minmax(350px,1fr)] p-4 gap-6">
+        <!-- ACTION BAR -->
+        <div class="col-span-2 row-start-1">
+          <div class="flex flex-wrap w-full gap-y-2">
+            <button class="btn btn-link btn-xs">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
+                />
+              </svg>
+              back
+            </button>
+            <div class="divider divider-horizontal py-1 m-0"></div>
+            <button class="btn btn-primary text-white btn-xs">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              New Transaction
+            </button>
+            <div class="divider divider-horizontal py-1 m-0"></div>
+            <select class="select select-bordered select-xs w-full max-w-xs">
+              <option disabled selected>Select Type</option>
+            </select>
+          </div>
+          <div class="flex flex-col items-center justify-center m-4">
+            <h2 class="text-xl font-semibold">
+              <span class="opacity-50 font-light">Client | </span>Harrow Lift
+              Engineering Co. Ltd.
+            </h2>
+          </div>
+          <h3 class="text-sm font-normal">
+            <span class="opacity-50 font-light">Pol. No. | </span>LE87772345
+          </h3>
+          <h3 class="text-sm font-normal">
+            <span class="opacity-50 font-light">C.O.B. | </span>Engineering -
+            Ins. & Inspection
+          </h3>
+        </div>
+        <div class="row-start-2 col-span-1">
+          <select class="select select-bordered select-xs w-full max-w-xs">
+            <option selected>post to current period - 01/FY2024</option>
+          </select>
+          <div class="overflow-x-auto">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>Trans Type</th>
+                  <td>Endt.- AP</td>
+                </tr>
+                <tr>
+                  <th>Invoice No.</th>
+                  <td>3029638</td>
+                </tr>
+                <tr>
+                  <th>Trans. No.</th>
+                  <td>7044304</td>
+                </tr>
+                <tr>
+                  <th>Status</th>
+                  <td>Unpaid</td>
+                </tr>
+                <tr>
+                  <th>Status Date</th>
+                  <td>19 Apr 2023</td>
+                </tr>
+                <tr>
+                  <th>Acc. Period</th>
+                  <td>01/FY2024</td>
+                </tr>
+                <tr>
+                  <th>Broker Ref</th>
+                  <td>SJD/2002157/3029638</td>
+                </tr>
+                <tr>
+                  <th>Posting Date</th>
+                  <td>
+                    <label
+                      class="input input-bordered input-xs flex items-center gap-2"
+                    >
+                      <input
+                        type="text"
+                        class="grow"
+                        placeholder="19 Apr 2023"
+                        value="19 Apr 2023"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                        />
+                      </svg>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Effective From</th>
+                  <td>
+                    <label
+                      class="input input-bordered input-xs flex items-center gap-2"
+                    >
+                      <input
+                        type="text"
+                        class="grow"
+                        placeholder="19 Apr 2023"
+                        value="19 Apr 2023"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                        />
+                      </svg>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Effective To</th>
+                  <td>
+                    <label
+                      class="input input-bordered input-xs flex items-center gap-2"
+                    >
+                      <input
+                        type="text"
+                        class="grow"
+                        placeholder="01 Jan 2024"
+                        value="01 Jan 2024"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                        />
+                      </svg>
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <textarea
+              class="textarea textarea-bordered w-full text-xs"
+              rows="5"
+            >
+Incr. Base HSB Eng. Ins. Co.1st Layer Prod. Liab. Cover from £1,000,000 to £2,000,000.
+
+Incr.Excess Layer MGB Ins. Brokers Prod. Liab. Cover from £3,000,000 to £5,000,000.
+Total Prod. Liab. S.I.: £7,000,000
+            </textarea>
+          </div>
+        </div>
+        <div
+          class="min-w-0 col-start-1 lg:col-start-2 lg:col-span-1 row-start-3 lg:row-start-2"
+        >
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text">Transaction Description</span>
+            </div>
+            <input
+              type="text"
+              value="TEST OUT TRANS. DESCRIPTION DETAILED TEXT WRAP ROUND"
+              class="input input-bordered input-xs min-w-full"
+            />
+          </label>
+          <div class="overflow-x-auto">
+            <div
+              class="grid grid-cols-9 min-w-[1750px] my-3 gap-2 border border-slate-200 rounded-md"
+            >
+              <div
+                class="hover row-start-2 col-start-1 col-span-9 bg-slate-200"
+              ></div>
+              <!-- Header row -->
+              <div
+                class="col-span-9 grid grid-cols-9 bg-slate-50 divide-x divide-slate-200"
+              >
+                <span class="col-start-1 font-bold p-3">Detail</span>
+                <span class="col-start-2 col-span-2 font-bold p-3">Client</span>
+                <span class="col-start-4 col-span-2 font-bold p-3">Broker</span>
+                <span class="col-start-6 col-span-2 font-bold p-3"
+                  >Insurance Co.</span
+                >
+                <span class="col-start-8 col-span-2 font-bold p-3"
+                  >AddOn I.C.</span
+                >
+              </div>
+
+              <!-- Data row -->
+              <span class="col-start-1 row-start-2 flex items-center p-2"
+                >Main Prem</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-2 row-start-2 whitespace-nowrap p-2"
+              >
+                inc IPT
+                <input
+                  type="text"
+                  value="5023.44"
+                  class="input input-bordered input-xs w-full"
+                />
+              </span>
+              <span
+                class="col-start-3 row-start-2 text-end flex items-center p-2"
+                >4485.21</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-4 row-start-2 whitespace-nowrap p-2"
+              >
+                Comm. @
+                <input
+                  type="text"
+                  value="15.00"
+                  class="input input-bordered input-xs w-full"
+                />%
+              </span>
+              <span class="col-start-5 row-start-2 p-2">
+                <input
+                  type="text"
+                  value="672.78"
+                  class="input input-bordered input-xs w-full text-end"
+                />
+              </span>
+              <span
+                class="col-start-8 col-span-2 row-start-2 flex items-center p-2"
+                >Main Prem</span
+              >
+
+              <!-- Data row -->
+              <span
+                class="flex items-center gap-x-2 col-start-1 row-start-3 whitespace-nowrap p-2"
+                >A.P<input
+                  type="text"
+                  value="Terrorism"
+                  class="input input-bordered input-xs w-full"
+              /></span>
+              <span
+                class="flex items-center gap-x-2 col-start-2 row-start-3 whitespace-nowrap p-2"
+              >
+                inc IPT
+                <input
+                  type="text"
+                  value="456.78"
+                  class="input input-bordered input-xs w-full"
+                />
+              </span>
+              <span
+                class="col-start-3 row-start-3 text-end flex items-center p-2"
+                >407.84</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-4 row-start-3 whitespace-nowrap p-2"
+              >
+                Comm. @
+                <input
+                  type="text"
+                  value="15.00"
+                  class="input input-bordered input-xs w-full"
+                />%
+              </span>
+              <span class="col-start-5 row-start-3 p-2">
+                <input
+                  type="text"
+                  value="672.78"
+                  class="input input-bordered input-xs w-full text-end"
+                />
+              </span>
+              <span
+                class="col-start-8 col-span-2 row-start-3 flex items-center p-2"
+                >Main Prem</span
+              >
+
+              <!-- Data row -->
+              <span class="col-start-1 row-start-4 flex items-center p-2"
+                >Main Prem</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-2 row-start-4 whitespace-nowrap p-2"
+              >
+                inc IPT
+                <input
+                  type="text"
+                  value="5023.44"
+                  class="input input-bordered input-xs w-full"
+                />
+              </span>
+              <span
+                class="col-start-3 row-start-4 text-end flex items-center p-2"
+                >4485.21</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-4 row-start-4 whitespace-nowrap p-2"
+              >
+                Comm. @
+                <input
+                  type="text"
+                  value="15.00"
+                  class="input input-bordered input-xs w-full"
+                />%
+              </span>
+              <span class="col-start-5 row-start-4 p-2">
+                <input
+                  type="text"
+                  value="672.78"
+                  class="input input-bordered input-xs w-full text-end"
+                />
+              </span>
+              <span
+                class="col-start-8 col-span-2 row-start-4 flex items-center p-2"
+                >Main Prem</span
+              >
+
+              <!-- Data row -->
+              <span class="col-start-1 row-start-5 flex items-center p-2"
+                >Main Prem</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-2 row-start-5 whitespace-nowrap p-2"
+              >
+                inc IPT
+                <input
+                  type="text"
+                  value="5023.44"
+                  class="input input-bordered input-xs w-full"
+                />
+              </span>
+              <span
+                class="col-start-3 row-start-5 text-end flex items-center p-2"
+                >4485.21</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-4 row-start-5 whitespace-nowrap p-2"
+              >
+                Comm. @
+                <input
+                  type="text"
+                  value="15.00"
+                  class="input input-bordered input-xs w-full"
+                />%
+              </span>
+              <span class="col-start-5 row-start-5 p-2">
+                <input
+                  type="text"
+                  value="672.78"
+                  class="input input-bordered input-xs w-full text-end"
+                />
+              </span>
+              <span
+                class="col-start-8 col-span-2 row-start-5 flex items-center p-2"
+                >Main Prem</span
+              >
+
+              <!-- Data row -->
+              <span class="col-start-1 row-start-6 flex items-center p-2"
+                >Main Prem</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-2 row-start-6 whitespace-nowrap p-2"
+              >
+                inc IPT
+                <input
+                  type="text"
+                  value="5023.44"
+                  class="input input-bordered input-xs w-full"
+                />
+              </span>
+              <span
+                class="col-start-3 row-start-6 text-end flex items-center p-2"
+                >4485.21</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-4 row-start-6 whitespace-nowrap p-2"
+              >
+                Comm. @
+                <input
+                  type="text"
+                  value="15.00"
+                  class="input input-bordered input-xs w-full"
+                />%
+              </span>
+              <span class="col-start-5 row-start-6 p-2">
+                <input
+                  type="text"
+                  value="672.78"
+                  class="input input-bordered input-xs w-full text-end"
+                />
+              </span>
+              <span
+                class="col-start-8 col-span-2 row-start-6 flex items-center p-2"
+                >Main Prem</span
+              >
+
+              <!-- Data row -->
+              <span class="col-start-1 row-start-7 flex items-center p-2"
+                >Main Prem</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-2 row-start-7 whitespace-nowrap p-2"
+              >
+                inc IPT
+                <input
+                  type="text"
+                  value="5023.44"
+                  class="input input-bordered input-xs w-full"
+                />
+              </span>
+              <span
+                class="col-start-3 row-start-7 text-end flex items-center p-2"
+                >4485.21</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-4 row-start-7 whitespace-nowrap p-2"
+              >
+                Comm. @
+                <input
+                  type="text"
+                  value="15.00"
+                  class="input input-bordered input-xs w-full"
+                />%
+              </span>
+              <span class="col-start-5 row-start-7 p-2">
+                <input
+                  type="text"
+                  value="672.78"
+                  class="input input-bordered input-xs w-full text-end"
+                />
+              </span>
+              <span
+                class="col-start-8 col-span-2 row-start-7 flex items-center p-2"
+                >Main Prem</span
+              >
+
+              <!-- Data row -->
+              <span class="col-start-1 row-start-8 flex items-center p-2"
+                >Main Prem</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-2 row-start-8 whitespace-nowrap p-2"
+              >
+                inc IPT
+                <input
+                  type="text"
+                  value="5023.44"
+                  class="input input-bordered input-xs w-full"
+                />
+              </span>
+              <span
+                class="col-start-3 row-start-8 text-end flex items-center p-2"
+                >4485.21</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-4 row-start-8 whitespace-nowrap p-2"
+              >
+                Comm. @
+                <input
+                  type="text"
+                  value="15.00"
+                  class="input input-bordered input-xs w-full"
+                />%
+              </span>
+              <span class="col-start-5 row-start-8 p-2">
+                <input
+                  type="text"
+                  value="672.78"
+                  class="input input-bordered input-xs w-full text-end"
+                />
+              </span>
+              <span
+                class="col-start-8 col-span-2 row-start-8 flex items-center p-2"
+                >Main Prem</span
+              >
+
+              <!-- Data row -->
+              <span class="col-start-1 row-start-95 flex items-center p-2"
+                >Main Prem</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-2 row-start-95 whitespace-nowrap p-2"
+              >
+                inc IPT
+                <input
+                  type="text"
+                  value="5023.44"
+                  class="input input-bordered input-xs w-full"
+                />
+              </span>
+              <span
+                class="col-start-3 row-start-95 text-end flex items-center p-2"
+                >4485.21</span
+              >
+              <span
+                class="flex items-center gap-x-2 col-start-4 row-start-95 whitespace-nowrap p-2"
+              >
+                Comm. @
+                <input
+                  type="text"
+                  value="15.00"
+                  class="input input-bordered input-xs w-full"
+                />%
+              </span>
+              <span class="col-start-5 row-start-95 p-2">
+                <input
+                  type="text"
+                  value="672.78"
+                  class="input input-bordered input-xs w-full text-end"
+                />
+              </span>
+              <span
+                class="col-start-8 col-span-2 row-start-95 flex items-center p-2"
+                >Main Prem</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-span-2 row-start-4 overflow-x-auto">
+          <div
+            class="grid grid-cols-12 min-w-[1000px] my-3 gap-2 border border-slate-200 rounded-md"
+          >
+            <!-- Header row -->
+            <div
+              class="col-span-12 grid grid-cols-12 bg-slate-50 divide-x divide-slate-200"
+            >
+              <span class="col-span-1 font-bold p-3">Type</span>
+              <span class="col-span-1 font-bold p-3">Invoice No.</span>
+              <span class="col-span-1 font-bold p-3">Trans.No.</span>
+              <span class="col-span-3 font-bold p-3"
+                >Transaction Description</span
+              >
+              <span class="col-span-1 font-bold p-3">Dir?</span>
+              <span class="col-span-1 font-bold p-3">Original</span>
+              <span class="col-span-1 font-bold p-3">Balance Due</span>
+              <span class="col-span-1 font-bold p-3">Total Paid</span>
+              <span class="col-span-1 font-bold p-3">Docs. Sent</span>
+              <span class="col-span-1 font-bold p-3">Init.</span>
+            </div>
+
+            <!-- Data row 1 -->
+            <div
+              class="col-span-12 grid grid-cols-12 hover:bg-slate-100 items-center"
+            >
+              <span class="col-span-1 p-2">Endt - AP</span>
+              <span class="col-span-1 p-2">3029638</span>
+              <span class="col-span-1 p-2">7044304</span>
+              <span class="col-span-3 p-2 text-blue-600"
+                >TEST OUT TRANS. DESCRIPTION DETAILED TEXT WRAP ROUND</span
+              >
+              <span class="col-span-1 p-2">N</span>
+              <span class="col-span-1 p-2 text-end">14144.77</span>
+              <span class="col-span-1 p-2 text-end">14144.77</span>
+              <span class="col-span-1 p-2 text-end">.00</span>
+              <span class="col-span-1 p-2"></span>
+              <span class="col-span-1 p-2">JJB</span>
+            </div>
+
+            <!-- Data row 2 -->
+            <div
+              class="col-span-12 grid grid-cols-12 hover:bg-slate-100 items-center"
+            >
+              <span class="col-span-1 p-2">Endt - AP</span>
+              <span class="col-span-1 p-2">3029636</span>
+              <span class="col-span-1 p-2">7044302</span>
+              <span class="col-span-3 p-2 text-blue-600"
+                >TEST UUID CHECKS RE. ELCU-42. GA PROG. UPDATE 18.6.24</span
+              >
+              <span class="col-span-1 p-2">N</span>
+              <span class="col-span-1 p-2 text-end">2300.47</span>
+              <span class="col-span-1 p-2 text-end">2300.47</span>
+              <span class="col-span-1 p-2 text-end">.00</span>
+              <span class="col-span-1 p-2"></span>
+              <span class="col-span-1 p-2">JJB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
